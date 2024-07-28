@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project1</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+        padding: 2px;
+        margin-top: 250px;
+        border: 2px solid black;
+    }
+    #grey{
+        background-color: gray;
+
+    }
+    #green{
+        background-color: green
+    }
+    #blue{
+        background-color: blue
+    }
+    #red{
+        background-color: red;
+    }
+
+  h1{
+    margin-left: 394px;
+  }
+</style>
+
+
+<body>
+    <h1>click any box to change the backgroundColor as same</h1>
+
+    <div class="container">
+   
+    <div class="box" id="grey">box1</div>
+    <div class="box" id="green">box2</div>
+    <div class="box" id="blue">box3</div>
+    <div class="box" id="red">box4</div>
+</div>
+</body>
+<script>
+    const boxes=document.querySelectorAll('.box');
+    const body=document.querySelector('body');
+
+    boxes.forEach((box)=>{
+        box.addEventListener('click',function(e){
+            console.log(e);
+            console.log(e.target)
+            if (e.target.id ==='grey') {
+                body.style.backgroundColor=e.target.id
+                
+            }
+            if (e.target.id ==='green') {
+                body.style.backgroundColor=e.target.id
+                
+            }
+            if (e.target.id ==='blue') {
+                body.style.backgroundColor=e.target.id
+                
+            }
+            if (e.target.id ==='red') {
+                body.style.backgroundColor=e.target.id
+                
+            }
+        })
+    })
+</script>
+</html>
